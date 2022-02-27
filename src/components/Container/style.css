@@ -4,14 +4,14 @@
     flex-direction: column;
     width: 380px;
     height: 600px;
-    background-color: lightgray;
+    background-color:#f6f8fa;
     margin: 10px
 }
 
 .headerContTask{
     display: flex;
     flex-direction: row;
-    width: 320px;
+    width: 380px;
     height: 60px;
     background-color: rgb(154, 194, 230);
     align-items: center;
@@ -50,3 +50,11 @@
     margin-left: 10px;
     margin-right: 10px;
 } */
+
+.ContainerTask{
+
+    align-self: center;
+
+
+
+}

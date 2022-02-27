@@ -17,16 +17,27 @@ function ContainerTask(prop) {
     const [dataState] = useContext(DataContext);
     
     const [newTask, uploadNewTask] = useState(false);
+    const [deletetask,uploaddelete] =useState([DataContext]);
 
     const handleNewTask = e => {
         if(newTask === false){
             uploadNewTask(true)
+          
         } else {
             uploadNewTask(false)
+           
         }
     }
 
+     const handlerdelete = (prop) =>{
+         console.log(deletetask)
+         uploaddelete(deletetask.splice(dataState.length,1)
+           
+         )
+         
+         console.log(deletetask)
 
+     }
     
 
     return (
@@ -34,7 +45,8 @@ function ContainerTask(prop) {
         <section className='ContTask'>
             <div className="headerContTask">
                 <div className='numberContTask'>
-                    <p>{prop?.prop.task.length}</p>
+                <p>{dataState.length}</p>
+                    {/* <p>{prop?.prop.task.length}</p> */}
                  </div>
                 <p className='titleContTask'>{prop?.prop.name}</p>
                 <button className='plusContTask' onClick={handleNewTask}>+</button>
@@ -44,7 +56,7 @@ function ContainerTask(prop) {
                    newTask ? <div className='task'><TextArea cancel={uploadNewTask} prop={prop.prop.id}></TextArea></div> : <></>
                 }
                 {
-                    prop?.prop.id === 1 ? dataState?.filter(e=> e.status === 'to_do').map((e,i) => <Card key={i} info={e}></Card> ): <></>
+                    prop?.prop.id === 1 ? dataState?.filter(e=> e.status === 'to_do').map((e,i) => <Card handlerOn={handlerdelete} key={i} info={e}></Card> ): <></>
                 }
                 {
                     prop?.prop.id === 2 ? dataState?.filter(e=> e.status === "in_progress").map((e,i) => <Card key={i} info={e}></Card> ): <></>
@@ -55,6 +67,7 @@ function ContainerTask(prop) {
              
 
             </div>
+        
         </section>
 
     )

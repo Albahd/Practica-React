@@ -8,18 +8,23 @@
 
 
 .container-note{
-    border:1px solid black;
+    border:2px solid #e4e6ea;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     margin: 20px;
-    border-radius: 10px;
-    width: 350x;    
-    height: 100px;
-   box-shadow: 7px 5px 20px 1px #000000;
+    border-radius: 5px;
+    width: 360px;    
+    height: 90px;
+   background-color:#ffffff;
+   -webkit-box-shadow: 10px 10px 25px -5px rgba(230,230,230,1);
+-moz-box-shadow: 10px 10px 25px -5px rgba(230,230,230,1);
+box-shadow: 10px 10px 25px -5px rgba(230,230,230,1);
+
 }
 .title-note{
-    color:grey;
+    color:
+    #96ade1;
     padding-left: 30px;
 
 
@@ -28,8 +33,9 @@
 
 .subtitle-note{
 
-color:grey;
-padding-left: 20px;
+color:
+#70777e;
+padding-left: 10px;
 
 }
 
@@ -40,8 +46,10 @@ padding-left: 20px;
     width: 15px;
     height: 15px;
     position: relative;
-    bottom: 20px;
-    left: 10px;
+    bottom: 25%;
+    margin-left: 10px;
+ 
+    
 }
 .in_progress{
     border-radius: 50%;
@@ -62,12 +70,15 @@ padding-left: 20px;
     height: 15px;
     position: relative;
     bottom: 20px;
-    left: 10px;
+    left: 40%;
 }
 
 .delete-note{
     position: relative;
-    left:280px;
+    left:90%;
+    bottom: 40%;
+  
+
 
 
 

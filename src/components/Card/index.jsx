@@ -3,9 +3,8 @@ import './style.css'
 
 
 function Card(props){
- const handlerdelete = e =>{
-      // e.props.splice()
-      console.log(e.target)
+ const handlerOn = e =>{
+      
 
   }
 
@@ -20,9 +19,9 @@ function Card(props){
         <react.Fragment>
        
             <div className='container-note'>
-          <h1 className='title-note'> {props?.info.title}</h1>
+          <h3 className='title-note'> {props?.info.title}</h3>
           <button className={props?.info.status} onClick={changeStatus}></button>
-         <p  className='delete-note' onClick={handlerdelete} >🗑️ </p>
+         <p  className='delete-note' onClick={handlerOn} >🗑️ </p>
            <p className='subtitle-note'>#Created on {props?.info.fecha}</p>
            </div>
         
