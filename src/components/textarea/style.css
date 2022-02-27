@@ -43,7 +43,7 @@
 
     .buttoncancel {
        
-        width: 180px;
+        width: 160px;
         height: 36px;
         background-color: lightgray;
         margin:0px;
@@ -56,7 +56,7 @@
 
     .textareainput {
        
-        width: 360px;
+        width: 340px;
         height: 80px;
         background-color: rgb(255, 255, 255);
         margin:0px;

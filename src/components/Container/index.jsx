@@ -13,11 +13,18 @@ import { useContext } from 'react';
 
 function ContainerTask(prop) {
     console.log(prop.prop.id)
+    
 
     const [dataState] = useContext(DataContext);
     
     const [newTask, uploadNewTask] = useState(false);
     const [deletetask,uploaddelete] =useState([DataContext]);
+
+
+    const todo = dataState?.filter(e=> e.status === 'to_do');
+    const progress = dataState?.filter(e=> e.status === 'in_progress');
+    const done = dataState?.filter(e=> e.status === 'done');
+   
 
     const handleNewTask = e => {
         if(newTask === false){
@@ -29,7 +36,11 @@ function ContainerTask(prop) {
         }
     }
 
-     const handlerdelete = (prop) =>{
+
+  
+        
+    
+     const handlerdelete = () =>{
          console.log(deletetask)
          uploaddelete(deletetask.splice(dataState.length,1)
            
@@ -38,16 +49,30 @@ function ContainerTask(prop) {
          console.log(deletetask)
 
      }
+ 
     
+ 
 
     return (
 
         <section className='ContTask'>
+            
             <div className="headerContTask">
-                <div className='numberContTask'>
-                <p>{dataState.length}</p>
-                    {/* <p>{prop?.prop.task.length}</p> */}
-                 </div>
+
+                <div className='numberTaskTodo'>
+                <p>{todo.length}</p>
+                </div>
+
+                <div className='numberTaskProgress'>
+                <p>{progress.length}</p>
+                </div>
+                <div className='numberTaskdone'>
+                <p>{done.length}</p>
+                </div>
+                   <div className='numberContTask'>
+                    <p>{prop?.prop.task.length}</p> 
+                    </div>
+               
                 <p className='titleContTask'>{prop?.prop.name}</p>
                 <button className='plusContTask' onClick={handleNewTask}>+</button>
             </div>

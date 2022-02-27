@@ -14,7 +14,7 @@
     flex-direction: column;
     margin: 20px;
     border-radius: 5px;
-    width: 360px;    
+    width: 340px;    
     height: 90px;
    background-color:#ffffff;
    -webkit-box-shadow: 10px 10px 25px -5px rgba(230,230,230,1);
@@ -77,6 +77,10 @@ padding-left: 10px;
     position: relative;
     left:90%;
     bottom: 40%;
+    width: 25px;
+    height: 25px;
+    border: none;
+    background-color: #ffffff;
   
 
 

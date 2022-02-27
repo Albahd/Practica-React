@@ -25,7 +25,7 @@ function TextArea(prop) {
       title: e.target.text.value,
       fecha: 'Created  on ' + date.toLocaleDateString()
     }
-    // console.log(prop.prop)
+    console.log(prop.prop)
     if(prop.prop === 1){
 
       const newTask = {
@@ -64,7 +64,7 @@ function TextArea(prop) {
   const handlerCancelTask = e => {
     e.preventDefault()
     prop.cancel(false)
-    // console.log(prop.cancel)
+    console.log(prop.cancel)
   
   }
 
