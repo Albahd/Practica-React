@@ -18,7 +18,7 @@ function ContainerTask(prop) {
     const [dataState] = useContext(DataContext);
     
     const [newTask, uploadNewTask] = useState(false);
-    const [deletetask,uploaddelete] =useState([DataContext]);
+    // const [deletetask,uploaddelete] =useState([DataContext]);
 
 
     const todo = dataState?.filter(e=> e.status === 'to_do');
@@ -40,15 +40,15 @@ function ContainerTask(prop) {
   
         
     
-     const handlerdelete = () =>{
-         console.log(deletetask)
-         uploaddelete(deletetask.splice(dataState.length,1)
+    //  const handlerdelete = () =>{
+    //      console.log(deletetask)
+    //      uploaddelete(deletetask.splice(dataState.length,1)
            
-         )
+    //      )
          
-         console.log(deletetask)
+    //      console.log(deletetask)
 
-     }
+    //  }
  
     
  
@@ -81,7 +81,7 @@ function ContainerTask(prop) {
                    newTask ? <div className='task'><TextArea cancel={uploadNewTask} prop={prop.prop.id}></TextArea></div> : <></>
                 }
                 {
-                    prop?.prop.id === 1 ? dataState?.filter(e=> e.status === 'to_do').map((e,i) => <Card handlerOn={handlerdelete} key={i} info={e}></Card> ): <></>
+                    prop?.prop.id === 1 ? dataState?.filter(e=> e.status === 'to_do').map((e,i) => <Card  key={i} info={e}></Card> ): <></>
                 }
                 {
                     prop?.prop.id === 2 ? dataState?.filter(e=> e.status === "in_progress").map((e,i) => <Card key={i} info={e}></Card> ): <></>
