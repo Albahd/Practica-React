@@ -1,4 +1,9 @@
 
+import { useState } from 'react';
+import React from 'react';
+
+
+
 import './style.css';
 import { useContext, useState } from 'react';
 import { DataContext } from '../context/dataContext';
@@ -70,6 +75,13 @@ function TextArea(prop) {
 
 
 
+    return (
+
+      <React.Fragment>
+        <div className="ContTextarea">
+
+          <textarea name="textValue" className='textareainput' rows="10" cols="50"></textarea>
+
   return (
     <form onSubmit={handlerAddTask}className="ContTextarea">
 
@@ -85,4 +97,16 @@ function TextArea(prop) {
 }
 
 
-export default TextArea;
+          <div className="buttoncontainer">
+            <button className='buttonadd'>Add</button>
+            <button className='buttoncancel' >Cancel</button>
+
+          </div>
+        </div >
+        </React.Fragment>
+        )
+        }
+        
+
+
+          export default TextArea
